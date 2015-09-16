@@ -44,7 +44,6 @@ class VectrexCfg(BaseConfig):
 
     ROM_START = 0xE000
     ROM_END = 0xFFFF
-    ROM_SIZE = 0x2000
 
     DEFAULT_ROMS = (
         VectrexRom(
@@ -57,8 +56,6 @@ class VectrexCfg(BaseConfig):
     # STARTUP_END_ADDR = 0xbbe5 # scan keyboard
 
     def __init__(self, cmd_args):
-        self.ROM_SIZE = (self.ROM_END - self.ROM_START) + 1
-        self.RAM_SIZE = (self.RAM_END - self.RAM_START) + 1
         super(VectrexCfg, self).__init__(cmd_args)
 
         self.machine_api = None# VectrexAPI()
@@ -75,5 +72,3 @@ config = VectrexCfg
 
 
 #------------------------------------------------------------------------------
-
-

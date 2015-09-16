@@ -7,7 +7,7 @@ class VectrexGUI(BaseTkinterGUI):
     def __init__(self, *args, **kwargs):
         super(VectrexGUI, self).__init__(*args, **kwargs)
 
+    def display_callback(self):
+        pass
 
 #------------------------------------------------------------------------------
-
-
